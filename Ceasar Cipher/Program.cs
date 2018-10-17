@@ -20,9 +20,14 @@ namespace Ceasar_Cipher
 
             foreach (var i in inputArray)
             {
-                int j = 0;
+                //int j = 0;
 
                 Convert.ToDecimal((int)i);
+                if (i == 32)
+                {
+                    shifted.Add(0000);
+                    continue;
+                }
                 if (i >= 48 && i <= 57)
                 {
                     shifted.Add(i + shift);
@@ -39,6 +44,10 @@ namespace Ceasar_Cipher
             Console.WriteLine();
             foreach (var j in shifted)
             {
+                if (j == 0000)
+                {
+                    Console.Write("");
+                }
                 Console.Write((char)j);
             }
             Console.WriteLine();
