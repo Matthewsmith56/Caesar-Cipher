@@ -20,8 +20,6 @@ namespace Ceasar_Cipher
 
             foreach (var i in inputArray)
             {
-                //int j = 0;
-
                 Convert.ToDecimal((int)i);
                 if (i == 32)
                 {
